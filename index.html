@@ -35,13 +35,13 @@
 
 </head>
 <body>
-    <!-- Hamburger Menu -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <!-- Hamburger Menu -->    
+    <i class="fa fa-bars mobile-nav-toggle d-xl-none" onclick="mobileNavigation()" aria-hidden="true"></i>
     <!-- Header starts here -->
-    <header id="header" class="header bg-dark">
-        <div class="d-flex flex-column">
+    <header id="header" class="header">
+        <div id="profile" class="d-flex flex-column">
             <div class="profile">
-                <img src="img/3.jpg" alt="profile-pic" class="img-fluid rounded-circle" width="150" height="200" > 
+                <img src="img/testimonials-1.jpg" alt="profile-pic"class="profile-pic img-fluid rounded-circle" width="150" height="200" > 
                 <h1 class="text-light"><a href="#home">AKSHAY S G</a></h1>
                 <div class="social-links mt-3 text-center">
                     <a href="https://twitter.com/i_am_akshay_sg"><img src="https://img.icons8.com/color/48/000000/twitter--v2.png"></a>
@@ -67,10 +67,13 @@
     <!-- Header ends here -->
 
     <!-- home section -->
-    <section id="home" class="d-flex flex-column flex-column justify-content-center align-content-center">
+    <section id="home" class="home d-flex flex-column flex-column justify-content-center align-content-center">
         <div class="home-container container" data-aos="fade-in">
-            <h1>AKSHAY S G</h1>
-            <p>I'm <span class="typed" data-typed-items="UI/UX Designer,Programmer,Freelancer"></span></p>
+            <h1 class="intro">Hi, This is <span class="myname">AKSHAY S G</span></h1>
+            <div class="type-container">
+                <h1>I'm a</h1>
+                <span id="typewriteText"></span>
+            </div>            
         </div>
     </section>
     <!-- Home Section Ends -->
@@ -84,9 +87,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam tenetur omnis provident mollitia suscipit voluptas ut ad reiciendis neque eligendi?</p>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <img src="img/2.jpg" alt="profile-pic" class="img-fliuid">
+                <div class="row about-row">
+                    <div class="col-lg-4 about-img" data-aos="fade-right">
+                        <img src="img/testimonials-1.jpg" alt="profile-pic" class="about-img img-fliuid">
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                         <h3>UI/UX Designer &amp; Web Developer.</h3>
@@ -95,7 +98,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i><strong>Birthday:</strong><span>10 June 2003</span></li>
+                                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i><strong>Birthday:</strong><span>June 2003</span></li>
                                     <li><i class="fa fa-chevron-right" aria-hidden="true"></i><strong>Website:</strong><span>www.example.com</span></li>
                                     <li><i class="fa fa-chevron-right" aria-hidden="true"></i><strong>Phone:</strong><span>+91 91760 xxxxx</span></li>
                                     <li><i class="fa fa-chevron-right" aria-hidden="true"></i><strong>City:</strong><span>Chennai,India</span></li>
@@ -110,7 +113,7 @@
                                 </ul>
                             </div>
                         </div>                    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ea reiciendis enim ipsum aliquid exercitationem eaque corrupti cum asperiores commodi.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam libero inventore quas culpa sunt omnis, dignissimos consequuntur nostrum laborum ratione illum nobis, quidem dolores. Blanditiis odio quam non accusamus dolor velit eveniet consequatur ad atque, aperiam necessitatibus beatae nihil. Enim officia maxime mollitia a illum dolore veniam molestiae doloremque animi velit magni natus, eaque facere deleniti voluptatibus, repellendus sint eius voluptas praesentium. Vero, molestias. Laboriosam culpa expedita vel aperiam magni!</p>
                     </div>
                 </div>
             </div>
@@ -123,38 +126,37 @@
                 <div class="section-title">
                     <h2>Facts</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae possimus provident corporis exercitationem quisquam ullam voluptate placeat architecto fugit dicta.</p>
-                </div>
-                <div class="row row-no-gutters">
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                        <div class="count-box">
-                            <span class="iconify" data-icon="codicon:smiley" data-inline="false"></span>
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                            <p><strong>Happy Clients</strong> Lorem ipsum dolor sit amet.</p>
+                </div>                
+                <div class="row text-center">
+                    <div class="col col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                        <div class="counter count-box">
+                                <i class="fa fa-code fa-2x facts-icon"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                                <p class="count-text"><strong>Our Customer</strong>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="count-box">
-                            <span class="iconify" data-icon="bi:journal-album" data-inline="false"></span>
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span> 
-                            <p><strong>Projects</strong> Lorem ipsum dolor sit amet.</p>                         
+                    <div class="col col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                       <div class="counter count-box">
+                            <i class="fa fa-coffee fa-2x facts-icon"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                            <p class="count-text"><strong>Happy Clients</strong>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="count-box">
-                            <span class="iconify" data-icon="bi:headset" data-inline="false"></span>
-                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span> 
-                            <p><strong>Hours Of Support</strong> Lorem ipsum dolor sit amet.</p>                         
+                    <div class="col col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                        <div class="counter count-box">
+                            <i class="fa fa-lightbulb-o fa-2x facts-icon"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+                            <p class="count-text"><strong>Project Complete</strong>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="count-box">
-                            <span class="iconify" data-icon="bi:people" data-inline="false"></span>
-                            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span> 
-                            <p><strong>Hard Workers</strong> Lorem ipsum dolor sit amet.</p>                         
+                    <div class="col col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                      <div class="counter count-box">
+                            <i class="fa fa-bug fa-2x facts-icon"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+                            <p class="count-text"><strong>Coffee With Clients</strong>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-
-                </div>
+                </div>                
             </div>
         </section>
         <!-- Facts section ends -->
@@ -166,56 +168,57 @@
                     <h2>Skills</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt aliquid consectetur et libero consequatur iusto impedit illo perspiciatis nemo!</p>
                 </div>
-                <div class="row skilll-content">
-                    <div class="col-lg-6" data-aos="fade-up">
-                        <div class="progress">
-                            <span class="skill">HTML <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar"></div>
-                            </div>
-                        </div>
+                <div class="row skills-content">
 
-                        <div class="progress">
-                            <span class="skill">HTML <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-lg-6" data-aos="fade-up">  
+                        <div class="html"> 
+                            <label for="progress">HTML</label>       
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
                             </div>
                         </div>
-
-                        <div class="progress">
-                            <span class="skill">CSS<i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          
+                        <div class="html"> 
+                            <label for="progress">CSS</label>       
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
                             </div>
                         </div>
-
-                        <div class="progress">
-                            <span class="skill">Javascript <i class="val">50%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          
+                        <div class="html"> 
+                            <label for="progress">Javascript</label>       
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
                             </div>
                         </div>
+          
                     </div>
-                    <div class="col-lg-6">
-                        <div class="progress">
-                            <span class="skill">Bootstrap <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          
+                        <div class="html"> 
+                            <label for="progress">Bootstrap</label>       
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
                             </div>
                         </div>
-                        <div class="progress">
-                            <span class="skill">UI/UX Design<i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          
+                        <div class="html"> 
+                            <label for="progress">Python</label>       
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
                             </div>
                         </div>
-                        <div class="progress">
-                            <span class="skill">Python <i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          
+                        <div class="html"> 
+                            <label for="progress">Wordpress</label>       
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
                             </div>
                         </div>
+          
                     </div>
+          
                 </div>
             </div>
         </section>
@@ -242,7 +245,7 @@
                         </div>
                         <h3 class="resume-title">Education</h3>
                         <div class="resume-item">
-                            <h4>Pursuing B.Tech CS in Shiv Nadar University</h4>
+                            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
                             <h5>2021-2025</h5>
                             <p><em>Chennai,Tamil Nadu,India</em></p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni provident fugiat mollitia! Natus ut odio in delectus voluptas, laboriosam alias?</p>
@@ -271,7 +274,7 @@
                                 <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
                                 <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
                                 <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                                 <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
                             </ul>
                         </div>                        
                     </div>
@@ -311,7 +314,7 @@
                         <div class="portfolio-wrap">
                             <img src="img/project-ss3.png" class="img-fluid" alt="project-ss1">
                             <div class="portfolio-links">
-                                <a href="img/project-ss3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App1"><span class="iconify" data-icon="akar-icons:plus" data-inline="false"></span></a>
+                                <a href="img/project-ss8.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App1"><span class="iconify" data-icon="akar-icons:plus" data-inline="false"></span></a>
                                 <a href="https://codepen.io/infosnyder/full/oNZeMWo" title="website-link"><span class="iconify" data-icon="akar-icons:link-chain" data-inline="false"></span></a>
                             </div>
                         </div>
@@ -327,7 +330,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="img/project-ss4.png" class="img-fluid" alt="project-ss1">
+                            <img src="img/project-ss9.png" class="img-fluid" alt="project-ss1">
                             <div class="portfolio-links">
                                 <a href="img/project-ss4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App1"><span class="iconify" data-icon="akar-icons:plus" data-inline="false"></span></a>
                                 <a href="https://codepen.io/infosnyder/full/KKWYBKg" title="website-link"><span class="iconify" data-icon="akar-icons:link-chain" data-inline="false"></span></a>
@@ -336,7 +339,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="img/project-ss5.png" alt="project-ss5" class="img-fluid">
+                            <img src="img/project-ss7.png" alt="project-ss5" class="img-fluid">
                             <div class="portfolio-links">
                                 <a href="img/project-ss5.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App1"><span class="iconify" data-icon="akar-icons:plus" data-inline="false"></span></a>
                                 <a href="https://codepen.io/infosnyder/full/PopJJBK" title="website-link"><span class="iconify" data-icon="akar-icons:link-chain" data-inline="false"></span></a>
@@ -357,34 +360,34 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="icon"><span class="iconify" data-icon="bi:briefcase" data-inline="false"></span></div>
+                        <div class="icon"><span class="services-icon iconify" data-icon="bi:briefcase" data-inline="false"></span></div>
                         <h4 class="title"><a href="#"> Lorem ipsum dolor.</a></h4>
-                        <p class="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon"><span class="iconify" data-icon="bi:card-checklist" data-inline="false"></span></div>
+                        <div class="icon"><span class="services-icon iconify" data-icon="bi:card-checklist" data-inline="false"></span></div>
                         <h4 class="title"><a href="#"> Lorem ipsum dolor.</a></h4>
-                        <p class="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon"><span class="iconify" data-icon="bi:bar-chart" data-inline="false"></span></div>
+                        <div class="icon"><span class="services-icon iconify" data-icon="bi:bar-chart" data-inline="false"></span></div>
                         <h4 class="title"><a href="#"> Lorem ipsum dolor.</a></h4>
-                        <p class="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon"><span class="iconify" data-icon="bi:binoculars" data-inline="false"></span></div>
+                        <div class="icon"><span class="services-icon iconify" data-icon="bi:binoculars" data-inline="false"></span></div>
                         <h4 class="title"><a href="#"> Lorem ipsum dolor.</a></h4>
-                        <p class="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                        <div class="icon"><span class="iconify" data-icon="bi:sun" data-inline="false"></span></div>
+                        <div class="icon"><span class="services-icon iconify" data-icon="bi:sun" data-inline="false"></span></div>
                         <h4 class="title"><a href="#"> Lorem ipsum dolor.</a></h4>
-                        <p class="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
                     </div>
                     <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                        <div class="icon"><span class="iconify" data-icon="uil:calender" data-inline="false"></span></div>
+                        <div class="icon"><span class="services-icon iconify" data-icon="uil:calender" data-inline="false"></span></div>
                         <h4 class="title"><a href="#"> Lorem ipsum dolor.</a></h4>
-                        <p class="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
+                        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequatur magnam sunt obcaecati ea assumenda voluptas neque optio nihil quae?</p>
                     </div>
                 </div>
             </div>
@@ -392,10 +395,10 @@
         <!-- Services Section Ends -->
 
         <!-- Testimonials Section Starts -->
-        <section id="services" class="services">
+        <section id="testimonials" class="testimonials">
             <div class="container">
                 <div class="section-title">
-                    <h2>Services</h2>
+                    <h2>Testimonials</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eveniet iure repellat, voluptate earum eos officiis saepe cumque obcaecati voluptates?</p>
                 </div>
                 <div class="testimonial-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
@@ -473,10 +476,10 @@
         <!-- Testimonials Section Ends -->
 
         <!-- Contact Section -->
-        <section id="services" class="services">
+        <section id="contact" class="contact">
             <div class="container">
                 <div class="section-title">
-                    <h2>Services</h2>
+                    <h2>Contact</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus eveniet iure repellat, voluptate earum eos officiis saepe cumque obcaecati voluptates?</p>
                 </div>
             
@@ -532,14 +535,23 @@
                 </div>
             </div>
         </section>
-
-
-
-
     </main>
     <!-- End Main -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><span class="iconify" data-icon="akar-icons:arrow-up" data-inline="false"></span></a>
 
+  <!-- BOOTSTRAP  -->
   <script src="bootstrap/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
-  <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>  
+  <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script> 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/mrvautin/typewrite/master/dist/typewrite.min.js"></script>
+  <!-- JAVASCRIPT -->
+  <script src="js/typing_animation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/purecounter_vanilla.js"></script>
+  <script src="js/mobile_nav.js"></script>  
+  <script src="js/facts_counter.js"></script>
+  
 </body>
 </html>
+
