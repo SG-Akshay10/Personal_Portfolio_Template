@@ -2,6 +2,9 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
   overflow-x: hidden;
+  -webkit-overflow-scrolling:touch;
+  overflow-y:scroll;
+  position:relative;
 }
 
 a {
